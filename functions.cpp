@@ -37,23 +37,6 @@ string getColumn(vector<string> text, int index)
     return returned;
 }
 
-string checkDiagDown(vector<string> text, int yDimension, string word)
-{
-    
-    for(int i = 0; i < text.size(); i++)
-    {
-        for(int j = 0; j < yDimension; j++)
-        {
-            string diagString = getDiagDown(text,yDimension,i,j);
-            if(diagString == word )
-            {
-                return i + " " + j;
-            }
-        }
-    }
-    return "null";
-}
-
 string getDiagDown(vector<string> text, int yDimension, int xPos, int yPos)
 {
     string builder = "";
